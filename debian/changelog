@@ -1,0 +1,92 @@
+shellcheck (0.3.7-5) unstable; urgency=medium
+
+  * Switch Vcs-Git/Vcs-Browser headers to new location.
+
+ -- Clint Adams <clint@debian.org>  Thu, 03 Dec 2015 14:55:22 -0500
+
+shellcheck (0.3.7-4) experimental; urgency=medium
+
+  * Disable the test suite on architectures without a threaded runtime, due to
+    https://github.com/haskell/cabal/issues/2398
+
+ -- Joachim Breitner <nomeata@debian.org>  Sat, 22 Aug 2015 09:24:27 +0200
+
+shellcheck (0.3.7-3) experimental; urgency=medium
+
+  * Add lintian override for spurious rpaths
+
+ -- Joachim Breitner <nomeata@debian.org>  Fri, 21 Aug 2015 09:14:00 +0200
+
+shellcheck (0.3.7-2) experimental; urgency=medium
+
+  [ Helmut Grohne ]
+  * Mark shellcheck as Multi-Arch:foreign.
+
+  [ Joachim Breitner ]
+  * Bump standards-version to 3.9.6
+  * Depend on haskell-devscripts >= 0.10 to ensure that this package
+    builds against GHC in experimental
+
+ -- Joachim Breitner <nomeata@debian.org>  Thu, 20 Aug 2015 10:29:14 +0200
+
+shellcheck (0.3.7-1) unstable; urgency=medium
+
+  * New upstream release.
+    + Update make_testsuite_optional.patch.
+    + Update Build-Depends regex-compat -> regex-tdfa.
+  * Use upstream manual page.
+  * Rebuild upstream manual page during build.
+
+ -- Helmut Grohne <helmut@subdivi.de>  Thu, 30 Apr 2015 21:59:35 +0200
+
+shellcheck (0.3.5-3) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Joachim Breitner <nomeata@debian.org>  Mon, 27 Apr 2015 11:56:02 +0200
+
+shellcheck (0.3.5-2) experimental; urgency=medium
+
+  * Depend on haskell-devscripts 0.9, found in experimental
+
+ -- Joachim Breitner <nomeata@debian.org>  Wed, 31 Dec 2014 00:23:38 +0100
+
+shellcheck (0.3.5-1) experimental; urgency=medium
+
+  * New Upstream release.
+    + Recognizes $$ in ((...)). (Closes: #754990)
+  * Refresh make_testsuite_optional.patch.
+
+ -- Helmut Grohne <helmut@subdivi.de>  Tue, 30 Dec 2014 22:07:55 +0100
+
+shellcheck (0.3.4-3) unstable; urgency=low
+
+  * Conditionally remove TemplateHaskell code on architectures that do not
+    have ghci to really fix FTBFS.
+
+ -- Helmut Grohne <helmut@subdivi.de>  Thu, 23 Oct 2014 22:34:37 +0200
+
+shellcheck (0.3.4-2) unstable; urgency=medium
+
+  * Only enable test suite on supported architectures. Fixes FTBFS.
+
+ -- Helmut Grohne <helmut@subdivi.de>  Tue, 21 Oct 2014 19:15:36 +0200
+
+shellcheck (0.3.4-1) unstable; urgency=low
+
+  [ Jakub Wilk ]
+  * Remove boldness from sections in manual page.
+
+  [ Helmut Grohne ]
+  * Declare compliance with policy 3.9.6.
+  * New upstream release.
+    + Recognizes xargs --null. (Closes: #753702)
+  * Enable QuickCheck2 based test suite.
+
+ -- Helmut Grohne <helmut@subdivi.de>  Mon, 20 Oct 2014 22:08:28 +0200
+
+shellcheck (0.3.3-1) unstable; urgency=low
+
+  * Initial release (Closes: 751199)
+
+ -- Joachim Breitner <nomeata@debian.org>  Tue, 24 Jun 2014 10:09:35 -0700

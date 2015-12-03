@@ -1,0 +1,36 @@
+Source: shellcheck
+Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
+Uploaders: Helmut Grohne <helmut@subdivi.de>
+Priority: extra
+Section: devel
+Build-Depends: debhelper (>= 9),
+ cdbs,
+ haskell-devscripts (>= 0.10),
+ ghc,
+ libghc-json-dev,
+ libghc-mtl-dev,
+ libghc-parsec3-dev,
+ libghc-regex-tdfa-dev,
+ libghc-quickcheck2-dev (>= 2.7.4),
+ pandoc,
+Standards-Version: 3.9.6
+Homepage: http://hackage.haskell.org/package/ShellCheck
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-haskell/DHG_packages.git/
+Vcs-Git: git://git.debian.org/git/pkg-haskell/DHG_packages.git
+
+Package: shellcheck
+Architecture: any
+Multi-Arch: foreign
+Depends: ${shlibs:Depends},
+ ${misc:Depends},
+Description: lint tool for shell scripts
+ The goals of ShellCheck are:
+ .
+  * To point out and clarify typical beginner's syntax issues,
+    that causes a shell to give cryptic error messages.
+ .
+  * To point out and clarify typical intermediate level semantic problems,
+    that causes a shell to behave strangely and counter-intuitively.
+ .
+  * To point out subtle caveats, corner cases and pitfalls, that may cause an
+    advanced user's otherwise working script to fail under future circumstances.
